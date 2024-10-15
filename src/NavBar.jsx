@@ -2,11 +2,9 @@ import * as React from 'react';
 import { Typography, Box, Button, AppBar, Toolbar, IconButton, Divider, List, ListItem, ListItemButton, ListItemText, Drawer } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ListItemIcon from '@mui/material/ListItemIcon';
+import NavButton from './components/NavButton';
 
-const drawerWidth = 240;
-
-export default function NavBar(props) {
-    const { window } = props;
+export default function NavBar({drawerWidth, appBarRef}) {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [isClosing, setIsClosing] = React.useState(false);
 
@@ -30,28 +28,12 @@ export default function NavBar(props) {
           <Toolbar />
           <Divider />
           <List>
-            {['Page 1', 'Page 2'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
+            <NavButton text="Home" link="/" />
+            <NavButton text="New Recipe" link="/add-recipe" />
           </List>
           <Divider />
           <List>
-            {['Settings', 'Settings 2'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
+            <NavButton text="Settings" />
           </List>
         </div>
     );
@@ -63,6 +45,7 @@ export default function NavBar(props) {
                 sx={{
                     zIndex: (theme) => theme.zIndex.drawer + 1,
                 }}
+                ref={appBarRef}
             >
                 <Toolbar>
                     <IconButton
