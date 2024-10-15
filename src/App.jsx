@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Typography, Box } from '@mui/material';
+import { Box } from '@mui/material';
+import NavBar from './NavBar';
 
 export default function App() {
+
     return (
         <Box>
-            <Typography variant="h1" component="h1" align="center">
-                Recipe Budgeter
-            </Typography>
+            <NavBar />
         </Box>
     );
 };
