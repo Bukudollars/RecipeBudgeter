@@ -33,6 +33,7 @@ export default function App() {
                     <Routes>
                         <Route path="/" element={<DataTable />} /> 
                         <Route path="/add-recipe" element={<AddRecipe />} />
+                        {/* <Route path="/recipe-select" element={<RecipeSelect />} /> */}
                     </Routes> 
                 </Box>
                 

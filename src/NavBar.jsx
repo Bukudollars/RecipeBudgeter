@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { Typography, Box, Button, AppBar, Toolbar, IconButton, Divider, List, ListItem, ListItemButton, ListItemText, Drawer } from '@mui/material';
+import { Typography, Box, Button, AppBar, Toolbar, IconButton, Divider, List, Drawer } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import NavButton from './components/NavButton';
 
 export default function NavBar({drawerWidth, appBarRef}) {
@@ -29,6 +28,7 @@ export default function NavBar({drawerWidth, appBarRef}) {
           <Divider />
           <List>
             <NavButton text="Home" link="/" />
+            <NavButton text="Recipe Select" link="/recipe-select" />
             <NavButton text="New Recipe" link="/add-recipe" />
           </List>
           <Divider />
