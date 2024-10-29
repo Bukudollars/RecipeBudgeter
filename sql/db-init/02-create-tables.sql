@@ -61,7 +61,7 @@ DROP TABLE IF EXISTS `recipe`;
 CREATE TABLE `recipe` (
   `recipeID` int NOT NULL AUTO_INCREMENT,
   `recipeName` varchar(32) NOT NULL,
-  `description` varchar(2000) NOT NULL,
+  `description` TEXT NOT NULL,
   `userID` int DEFAULT NULL,
   PRIMARY KEY (`recipeID`),
   KEY `userID` (`userID`),

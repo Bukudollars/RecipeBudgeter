@@ -37,4 +37,13 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(username,password)
+(username,password);
+
+LOAD DATA INFILE '/var/lib/mysql-files/recipes.csv'
+INTO TABLE recipe
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(recipeName, description, userID);
