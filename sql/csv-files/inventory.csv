@@ -1,0 +1,307 @@
+itemName,stock,price,size,unitID
+Asparagus,25,3.5,1,2
+Beets,25,4.5,1,2
+Broccoli,25,4.5,1,2
+Cauliflower,25,3,1,2
+Carrots,25,3,1,1
+Celery,25,4,1,2
+Corn,25,3,1,2
+Cucumbers,25,4.5,1,2
+Greens,25,5.4,1,1
+Lettuce,25,4.5,1,2
+Mushrooms,25,4.5,5,2
+Onions,25,3,6,2
+Green Onions,25,3.5,6,2
+Bell Peppers,25,2.5,1,2
+Jalapenos,25,2.5,0.5,1
+Peppers,25,2.5,0.5,1
+Potatoes,25,3.5,1,1
+Spinach ,25,4.5,1,1
+Brussel Sprouts,25,4.5,1,1
+yellow squash,25,5,1,2
+Zucchini,25,5,1,2
+Tomatoes,25,5,1,2
+Avocado,25,3.5,1,2
+Garlic,25,5,1,2
+Kale,25,4.5,0.5,1
+Cabbage,25,4.5,1,2
+Arugula,25,3.5,0.5,1
+butternut squash,25,3.5,1,2
+green beans,25,3,1,1
+snap peas,25,3,1,1
+eggplant,25,3,1,2
+parsley,25,4.5,0.5,1
+Peas,25,5,1,1
+Okra,25,5,1,1
+Ginger,25,3.5,1,2
+Beets,25,4,1,2
+Radishes,25,4,1,2
+Yuca Root,25,5,1,2
+Leeks,25,4.5,1,2
+Apples,40,3.5,1,2
+Bananas,40,3.5,1,1
+Blueberries,40,3.5,1,1
+Raspberries,40,3.5,1,1
+Strawberries,40,3.5,1,1
+Blackberries,40,3.5,1,1
+Cherries,40,3.5,1,1
+Grapes,40,3.5,1,1
+Kiwis,40,3.5,1,1
+Lemons,40,3.5,1,2
+Limes,40,3.5,1,2
+Cantaloupe,40,5,1,2
+Orange,40,3.5,1,1
+Peaches,40,3.5,1,1
+Pears,40,3.5,1,1
+Plums,40,3.5,1,1
+Pineapple,40,3.5,1,2
+Mango,40,6,1,2
+Cranberries,40,3.5,1,1
+Pomegranates,40,5,1,2
+Melons,40,4.5,1,2
+Watermelon,40,5,1,2
+Applesauce,50,3.5,3.2,5
+Baked Beans,50,2,15,5
+Refried Beans,50,2,15,5
+canned carrots,50,2,15,5
+canned corn,50,2,15,5
+mixed fruit can,50,2,15,5
+mixed veggie can,50,2,15,5
+olives,50,5,15,5
+marinara sauce,50,2,24,5
+pasta sauce,50,5,24,5
+alfredo sauce,50,5,24,5
+pickles,50,4,15,5
+canned tuna,50,4,15,5
+tomato soup,50,4,15,5
+chicken noodle soup,50,4,15,5
+cream of mushroom soup,50,4,15,5
+canned green beans,50,4,15,5
+canned sweet potatoes,50,4,15,5
+canned peaches,50,4.5,15,5
+canned chicken broth,50,4,15,5
+canned vegetable broth,50,4,15,5
+canned beef stock,50,4.5,15,5
+canned pumpkin puree,50,4,15,5
+canned pineapple,50,4,15,5
+BBQ Sauce,45,3.5,14,5
+Hot Sauce,45,3.5,14,5
+Salsa,45,3.5,14,5
+Soy Sauce,45,3.5,14,5
+Steak Sauce,45,3.5,14,5
+Syrup,45,3.5,14,5
+Worcestershire Sauce,45,3.5,14,5
+Ketchup,45,2,14,5
+Mustard,45,2,14,5
+Ranch,45,2,14,5
+Queso,45,3.5,14,5
+bottled water,40,20,1,6
+bottled water ,40,22,2,6
+bottled water,40,25,1,7
+bottled water,40,30,16,5
+lemonade,40,5,1,6
+bullion cubes,40,5,32,5
+cereal,40,6,1,1
+corn flakes,40,6.5,1,1
+coffee grounds,40,6.5,1,1
+cold brew coffee,40,6.5,1,6
+coffee concentrate,40,6.5,1,6
+coffee,40,6.5,24,5
+honey,40,6.5,10,5
+gravy,40,6.5,15,5
+jelly cups,40,6.5,8,2
+lemon juice,40,2.5,8,5
+lime juice,40,2.5,8,5
+mac & cheese,40,5.5,0.5,1
+mayonnaise,40,2.5,15,5
+pancake mix,40,5.5,1,1
+waffle mix,40,5.5,1,1
+peanut butter,40,3.5,8,5
+orange marmalade,40,3.5,8,5
+strawberry jam,40,3.5,8,5
+blackberry jam,40,3.5,8,5
+ramen,40,2,0.5,1
+noodles,40,4.5,0.5,1
+soda,40,6.5,6,5
+tea,40,6.5,1,6
+white rice,40,8,5,1
+brown rice,40,8,5,1
+penne pasta,40,8,4,4
+rigatoni pasta,40,8,4,4
+bucatini pasta,40,8,4,4
+fettuccine pasta,40,8,4,4
+fusilli pasta,40,8,4,4
+spaghetti pasta,40,8,4,4
+macaroni pasta,40,8,4,4
+Basil,35,4.5,0.5,1
+black pepper,35,4.5,0.5,4
+cilantro,35,4.5,0.5,1
+cinnamon,35,4.5,0.5,4
+oregano,35,4.5,0.5,4
+parsley,35,4.5,0.5,4
+red pepper,35,4.5,1,4
+salt,35,9,0.5,1
+vanilla extract,35,4.5,8,5
+turmeric,35,4.5,0.5,4
+all spice,35,4.5,0.5,4
+cardamom,35,4.5,0.5,4
+anise,35,4.5,0.5,4
+cayenne pepper,35,4.5,0.5,4
+cumin,35,4.5,0.5,4
+mint,35,4.5,0.5,1
+clove,35,4.5,0.5,4
+dill,35,4.5,0.5,4
+nutmeg,35,4.5,0.5,4
+paprika,35,4.5,0.5,4
+apple cider vinegar,35,8,2,6
+balsamic vinegar,35,8,1,6
+salad dressing,35,7.5,1,6
+olive oil,35,9.5,1,6
+vegetable oil,35,9.5,1,6
+white vinegar,35,9,1,6
+sunflower oil,35,12.5,1,7
+peanut oil,35,12.5,1,7
+canola oil,35,12.5,1,6
+rice vinegar,35,12.5,1,6
+red wine vinegar,35,12.5,1,6
+white wine vinegar,35,12.5,1,6
+Eggs,50,12,12,2
+brown eggs,30,12,12,2
+orange juice,30,15,1,7
+apple juice,30,15,1,7
+Tofu,30,10,1,1
+Tortillas,30,8.5,12,2
+grape juice,30,9.5,1,7
+grapefruit,30,9.5,1,2
+cranberry juice,30,9.5,1,7
+white bread,50,9.5,1,1
+brown bread,50,9.5,1,1
+burger buns,50,12.5,6,2
+hot dog buns,50,12.5,6,2
+ciabatta bread,30,9.5,6,2
+baguette,30,9.5,1,2
+sourdough,30,10,1,2
+brioche,30,9.5,1,2
+bagel,50,9.5,6,2
+muffin,30,9.5,6,2
+pita bread,30,12,5,2
+Half & Half,30,5,15,5
+Heavy Cream,30,5,15,5
+Margarine,30,6.5,15,5
+Whole Milk,50,4.5,0.5,6
+Whole Milk,50,5,1,6
+Whole Milk ,50,5.5,1,7
+1% Milk,50,4.5,0.5,6
+1% Milk,50,5,1,6
+1% Milk,50,5.5,1,7
+2% Milk,50,4.5,0.5,6
+2% Milk,50,5,1,6
+2% Milk,50,5.5,1,7
+Fat Free Milk,40,4.5,0.5,6
+Fat Free Milk,40,5,1,6
+Fat Free Milk,40,5.5,1,7
+Almond Milk,40,4.5,0.5,6
+Almond Milk,40,5,1,6
+Almond Milk,40,5.5,1,7
+Soy Milk,40,4.5,0.5,6
+Soy Milk,40,5,1,6
+Soy Milk,40,5.5,1,7
+Sour Cream,30,5,16,5
+Whipped Cream,30,5,16,5
+Yogurt,30,5,16,5
+Condensed Milk,30,5,16,5
+Milk Powder,30,5,4,4
+Buttermilk,30,5,1,7
+Butter,50,5,0.5,1
+Cheddar cheese,50,4.5,1,1
+Cottage Cheese,50,4.5,1,1
+Cream Cheese,50,4.5,1,1
+Feta,50,4.5,1,1
+mozzarella,50,4.5,1,1
+parmesan,50,4.5,1,1
+pepper jack,50,4.5,1,1
+provolone,50,4.5,1,1
+ricotta,50,4.5,1,1
+sliced cheese,50,4.5,1,1
+shredded cheese,50,4.5,1,1
+swiss cheese,50,4.5,1,1
+monterey jack cheese,50,4.5,1,1
+American cheese,50,4.5,1,1
+frozen burritos,35,12.5,5,2
+ice cream,35,9.5,1,1
+frozen puff pastry,35,12.5,1,2
+frozen fish sticks,35,15,1,1
+chicken nuggets,35,15,1,1
+frozen pizza,35,15,1,1
+fries,35,12.5,1,1
+tater tots,35,12.5,1,1
+frozen vegetables,35,10,1,1
+frozen burger patties,35,10,1,1
+frozen hash browns,35,10,1,1
+frozen meatballs,35,12.5,1,1
+frozen brussel sprouts,35,10,1,1
+frozen corn,35,10,1,1
+frozen peas,35,10,1,1
+Bacon,50,11.5,1,1
+Beef,50,11.5,1,1
+Chicken,50,11.5,1,1
+Ground Beef,50,11.5,1,1
+Ground Turkey,50,11.5,1,1
+Ham,50,8.5,1,1
+Spam,50,8.5,1,1
+Hot Dogs,50,8.5,1,1
+Lunchmeat,50,8.5,1,1
+Pork,50,8.5,1,1
+Sausage,50,8.5,1,1
+Steak,50,15,1,1
+Turkey,50,15,1,1
+Catfish,50,15,1,1
+Cocktail sauce,50,6.5,12,5
+Crab,50,15,1,1
+Halibut,50,15,1,1
+Oysters,50,15,1,1
+Salmon,50,15,1,1
+Shrimp,50,15,1,1
+Tilapia,50,15,1,1
+Tuna,50,15,1,1
+Lobster,50,15,1,1
+cake pops,50,6.5,6,2
+Cake,30,6.5,1,1
+Cookies,30,6.5,1,2
+Crackers,30,6.5,1,1
+Croissants,30,6.5,6,2
+Unsalted Butter,50,5,1,1
+Donuts,25,10.5,6,2
+Pastries,25,10.5,6,2
+Pie,25,10.5,1,2
+Pie crust,25,10.5,1,1
+Rolls,25,10.5,6,2
+Baking powder,25,3.5,4,4
+baking soda,25,3.5,4,4
+bread crumbs,25,5.5,4,4
+brown sugar,25,5.5,1,1
+white sugar,25,5.5,1,1
+granulated sugar,25,5.5,1,1
+cake decorations,25,5.5,4,4
+chocolate chip,25,5.5,1,1
+cocoa powder,30,7.5,1,1
+all purpose flour,30,10.5,1,1
+flour,30,10.5,1,1
+oatmeal,30,10.5,1,1
+powdered sugar,30,4.5,1,1
+shortening,30,4,1,1
+sugar,30,5.5,1,1
+yeast,30,5,1,1
+dried fruit,30,7.75,1,1
+granola bars,30,8.5,10,2
+cashews,30,12.5,1,1
+almonds,30,12.5,1,1
+hazelnuts,30,12.5,1,1
+peanuts,30,12.5,1,1
+walnuts,30,12.5,1,1
+popcorn,30,8.5,4,4
+potato chips,30,6.5,4,4
+chocolate pudding,30,10,4,4
+vanilla pudding,30,10,4,4
+pretzels,30,5,4,4
+tortilla chips,30,5,4,4

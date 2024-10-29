@@ -14,3 +14,19 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (unitID, kgConversion);
+
+LOAD DATA INFILE '/var/lib/mysql-files/volume_unit.csv'
+INTO TABLE volume_unit
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(unitID, literConversion);
+
+LOAD DATA INFILE '/var/lib/mysql-files/inventory.csv'
+INTO TABLE inventory
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(itemName, stock, price, size, unitID);

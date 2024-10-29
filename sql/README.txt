@@ -5,7 +5,7 @@ Requirements:
 
 Startup:
 1. from this folder, run: 
-    docker-compose up
+    docker-compose up -d
 if you already have a volume for the persistent data, the create.sql will not run.
 if you want to force it to run again and reset the database, delete the persistent volume.
     See below for more information on persistent volume deletion.
