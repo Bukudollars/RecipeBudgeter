@@ -47,3 +47,11 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (recipeName, description, userID);
+
+LOAD DATA INFILE '/var/lib/mysql-files/recipe_item.csv'
+INTO TABLE recipe_item
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(recipeID,itemID,quantity,unitID);
