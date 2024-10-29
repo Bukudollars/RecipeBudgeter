@@ -1,3 +1,4 @@
+USE recipe_budgeter;
 LOAD DATA INFILE '/var/lib/mysql-files/unit.csv' 
 INTO TABLE unit
 FIELDS TERMINATED BY ','
