@@ -11,7 +11,19 @@ if you want to force it to run again and reset the database, delete the persiste
     See below for more information on persistent volume deletion.
 
 Shutdown:
+There is an issue where the docker container will overwrite the file permissions 
+of the csv-files and db-init directories. use the shutdown_docker.sh script to fix it.
+this will require superuser permissions
+
 1. from this folder, run:
-    docker-compose down
+    shutdown_docker.sh
 if you want to delete the persistent volume as well, instead run
-    docker-compose down -v
+    shutdown_docker.sh -v
+
+Accessing SQL:
+1. docker ps 
+    identify the mysql container name, it should be mysql-db
+2. docker exec -it mysql-db bash
+
+3. mysql -p 
+4. enter password 
