@@ -30,3 +30,11 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (itemName, stock, price, size, unitID);
+
+LOAD DATA INFILE '/var/lib/mysql-files/users.csv'
+INTO TABLE users
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(username,password)
