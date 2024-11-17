@@ -39,33 +39,37 @@ connection.connect((err) => {
 
 // Create New User
 app.post('/api/register', (req, res) => {
-    const { username, password } = req.body
-    const query = `INSERT INTO users (username , password) VALUES (?, ?, ?)`
+    const { username, password } = req.body;
+    const query = `INSERT INTO users (username, password) VALUES (?, ?)`;
     connection.query(query, [username, password], (err, results) => {
         if (err) {
-        console.error(err)
-        res.status(500).json({ message: 'Failed to register user' })
+            console.error(err);
+            res.status(500).json({ message: 'Failed to register user' });
         } else {
-        res.status(201).json({ message: 'User registered successfully' })
+            res.status(201).json({ message: 'User registered successfully' });
         }
-    })
-})
+    });
+});
 
 // Check Login
 app.post('/api/login', (req, res) => {
-    const { username, password } = req.body
-    const query = `SELECT * FROM users WHERE username = ? AND password = ?`
+    const { username, password } = req.body;
+    const query = `SELECT * FROM users WHERE username = ? AND password = ?`;
     connection.query(query, [username, password], (err, results) => {
         if (err) {
-        console.error(err)
-        res.status(500).json({ message: 'Failed to login' })
+            console.error(err);
+            res.status(500).json({ message: 'Failed to login' });
         } else if (results.length === 0) {
-        res.status(401).json({ message: 'Invalid credentials' })
+            res.status(401).json({ message: 'Invalid credentials' });
         } else {
-        res.status(200).json({ message: 'Login successful' })
+            const user = results[0];
+            res.send({ 
+                message: 'Login successful', 
+                userID: user.userID 
+            });
         }
-    })
-})
+    });
+});
 
 // Delete User
 app.post('/api/deleteUser', (req, res) => {
@@ -94,18 +98,85 @@ app.get('/api/getAllRecipes', (req, res) => {
     })
 })
 
-// Get Specific Recipe
-app.get('/api/getRecipe', (req, res) => {
-    const query = `SELECT * FROM recipe WHERE recipeID = ?`
-    connection.query(query, [recipeID], (err, results) => {
+// Fetch User Recipes
+app.post('/api/userRecipe', (req, res) => {
+    const userID = req.body.userID;
+    
+    const query = `
+        SELECT 
+            r.recipeID, 
+            r.recipeName, 
+            r.description
+        FROM recipe r
+        WHERE r.userID IS NULL OR r.userID = ?
+    `;
+    
+    connection.query(query, [userID], (err, recipes) => {
         if (err) {
-        console.error(err)
-        res.status(500).json({ message: 'Failed to get recipe' })
-        } else {
-        res.status(200).json(results)
+            console.error(err);
+            return res.status(500).json({ message: 'Failed to fetch recipes' });
         }
-    })
-})
+
+        // If no recipes found, return an empty array
+        if (recipes.length === 0) {
+            return res.status(200).json([]);
+        }
+
+        // Fetch ingredients for each recipe
+        const recipeIDs = recipes.map(recipe => recipe.recipeID);
+        const ingredientQuery = `
+            SELECT 
+                ri.recipeID,
+                ri.itemID AS ingredientID,
+                i.itemName AS ingredientName,
+                ri.quantity,
+                ri.unitID,
+                u.unitName,
+                u.unitType,
+                i.price,
+                i.size,
+                i.stock
+            FROM recipe_item ri
+            JOIN inventory i ON ri.itemID = i.itemID
+            JOIN unit u ON ri.unitID = u.id
+            WHERE ri.recipeID IN (?)
+        `;
+
+        connection.query(ingredientQuery, [recipeIDs], (err, ingredients) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).json({ message: 'Failed to fetch ingredients' });
+            }
+
+            // Map ingredients to their corresponding recipes and calculate totalPrice
+            const recipeMap = recipes.map(recipe => {
+                const recipeIngredients = ingredients.filter(ing => ing.recipeID === recipe.recipeID);
+                const totalPrice = 0.00;
+
+                return {
+                    recipeID: recipe.recipeID,
+                    recipeName: recipe.recipeName,
+                    description: recipe.description,
+                    totalPrice: totalPrice.toFixed(2),
+                    ingredients: recipeIngredients.map(ing => ({
+                        ingredientID: ing.ingredientID,
+                        ingredientName: ing.ingredientName,
+                        quantity: ing.quantity,
+                        unitID: ing.unitID,
+                        unitName: ing.unitName,
+                        unitType: ing.unitType,
+                        price: ing.price,
+                        size: ing.size,
+                        stock: ing.stock
+                    }))
+                };
+            });
+
+            res.status(200).json(recipeMap);
+        });
+    });
+});
+
 
 // Add New Recipe
 app.post('/api/addRecipe', (req, res) => {
@@ -160,6 +231,30 @@ app.post('/api/deleteRecipeItem', (req, res) => {
         } 
         else {
         res.status(200).json({ message: 'Recipe item deleted successfully' })
+        }
+    })
+})
+
+//Get All Units
+app.get('/api/getAllUnits', (req, res) => {
+    const query = `SELECT * FROM unit`
+    connection.query(query, (err, results) => {
+        if (err) {
+            console.error(err)
+            res.status(500).json({ message: 'Failed to get units' })
+        }
+        else {
+            const unitsByType = results.reduce ((acc, unit) => {
+                const { unitType, unitName } = unit;
+                if (!acc[unitType]) {
+                    acc[unitType] = []
+                }
+                acc[unitType].push(unitName)
+                return acc
+            }, {})
+            res.status(200).json({ message: 'Units retrieved successfully',
+                units: unitsByType 
+            })
         }
     })
 })
