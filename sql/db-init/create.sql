@@ -68,6 +68,8 @@ CREATE TABLE `recipe` (
   PRIMARY KEY (`recipeID`),
   KEY `userID` (`userID`),
   CONSTRAINT `recipe_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `users` (`userID`)
+      ON DELETE SET NULL
+      ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -86,7 +88,9 @@ CREATE TABLE `recipe_item` (
   PRIMARY KEY (`recipeID`,`itemID`),
   KEY `itemID` (`itemID`),
   KEY `unitID` (`unitID`),
-  CONSTRAINT `recipe_item_ibfk_1` FOREIGN KEY (`recipeID`) REFERENCES `recipe` (`recipeID`),
+  CONSTRAINT `recipe_item_ibfk_1` FOREIGN KEY (`recipeID`) REFERENCES `recipe` (`recipeID`)
+              ON DELETE CASCADE 
+              ON UPDATE CASCADE,
   CONSTRAINT `recipe_item_ibfk_2` FOREIGN KEY (`itemID`) REFERENCES `inventory` (`itemID`),
   CONSTRAINT `recipe_item_ibfk_3` FOREIGN KEY (`unitID`) REFERENCES `unit` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
