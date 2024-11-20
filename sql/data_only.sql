@@ -71,7 +71,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'nidhi','byebye123\r'),(2,'james','123hello\r'),(3,'ansh','hello123\r'),(4,'mon','cooking65\r'),(5,'vidhi','ilovepasta\r'),(6,'rishi','icecream22\r');
+INSERT INTO `users` VALUES (1,'nidhi','byebye123'),(2,'james','123hello'),(3,'ansh','hello123'),(4,'mon','cooking65'),(5,'vidhi','ilovepasta'),(6,'rishi','icecream22');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
