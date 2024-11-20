@@ -71,6 +71,26 @@ app.post('/api/login', (req, res) => {
     });
 });
 
+// Check Login
+app.post('/api/login2', (req, res) => {
+    const { username, password } = req.body;
+    const query = `SELECT * FROM users WHERE username = ` + username + ` AND password = ?`;
+    connection.query(query, [username, password], (err, results) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Failed to login' });
+        } else if (results.length === 0) {
+            res.status(401).json({ message: 'Invalid credentials' });
+        } else {
+            const user = results[0];
+            res.send({ 
+                message: 'Login successful', 
+                userID: user.userID 
+            });
+        }
+    });
+});
+
 // Delete User
 app.post('/api/deleteUser', (req, res) => {
     const { username } = req.body
@@ -252,7 +272,7 @@ app.get('/api/getAllUnits', (req, res) => {
                 acc[unitType].push(unitName)
                 return acc
             }, {})
-            res.status(200).json({ message: 'Units retrieved successfully',
+            res.status(200).json({
                 units: unitsByType 
             })
         }
